@@ -1,0 +1,128 @@
+@right-panel-back-color: #fff;
+@navbar-radius: 0px;
+@body-back-color: rgb(49, 54, 64);
+@link-color: #333;
+@link-color-hover: #d9534f;
+
+body{
+	font-family: 'PT Sans', sans-serif;
+}
+
+.navbar-radius(@navbar-radius){
+   -webkit-border-radius: @navbar-radius;
+   -moz-border-radius: @navbar-radius;
+        border-radius: @navbar-radius;
+}
+
+.blog-header{
+	background-color: #1fa67a;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.blog-description{
+	position: relative;
+	font-size: 30px;
+	text-align: center;
+}
+
+#logo{
+	width: 20%;
+}
+
+.panel-body>div>ul>a, .panel-body>ul>a{
+	color: #000;
+	text-decoration: none;
+	transition: all 0.2s linear;
+	&:hover{
+		color: @link-color-hover;
+	}
+}
+
+.navbar{
+	.navbar-radius(@navbar-radius);
+	background-color: #222;
+}
+
+.navbar .navbar-nav>li{
+	a{
+		color: #fff;
+		&:hover{
+			background-color: @link-color-hover !important;
+		}
+		&:visited{
+			background-color: #222;
+		}
+	}
+}
+
+.page-header{
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+.panel-default{
+	border-color: #fff;
+}
+
+.panel{
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+
+.scrollbar{
+	width: 245px;
+	height: 400px;
+	overflow: auto;
+}
+
+#scrollbar-style::-webkit-scrollbar{
+	background-color: #fff;
+	width: 5px;
+}
+
+#scrollbar-style::-webkit-scrollbar-thumb{
+	background-color: #333;
+	border: 0px solid;
+	border-radius: 5px;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	border-bottom: 1px solid #000;
+}
+
+td:first-child {
+    width: 5%;
+}
+
+td:last-child {
+    width: 20%;
+}
+
+.blog-footer{
+	padding: 40px 0;
+	color: #fff;
+	text-align: center;
+	background-color: #1fa67a;
+	border-top: 1px solid #fff;
+
+	a{
+		color: #a5d8c7;
+		transition: all 0.2s linear;
+		text-decoration: none
+	}
+
+}
+.blog-footer a{
+	color: #a5d8c7;
+	transition: all 0.2s linear;
+	text-decoration: none;
+}
+
+.form-group{
+	display: block;
+	width: 100% !important;
+	textarea{
+		height: 150px;
+		resize: vertical;
+	}
+}
