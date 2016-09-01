@@ -17,7 +17,7 @@ $(window).on 'hashchange', ->
 		when 'kontakt' then $('#changeableContent').load 'kontakt.html', ->
 		 submitBtnOff()
 		else $('#changeableContent').load 'beers.html #' + href
-
+# Switch on/off Submit button
 submitBtnOff = ->
   $('#submit-button').prop 'disabled', true
   $('#name, #email, #message').on 'keyup', ->
