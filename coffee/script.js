@@ -1,7 +1,7 @@
 (function() {
   var submitBtnOff;
 
-  $(window).ready(function() {
+  $(document).ready(function() {
     return jQuery.goup({
       location: 'right',
       containerSize: 60,
