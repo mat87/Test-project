@@ -1,5 +1,5 @@
 # Add "Back to top" button on bottom-right side of page
-$(window).ready ->
+$(document).ready ->
   jQuery.goup location: 'right', containerSize: 60, trigger: 400, arrowColor: '#1fa67a', containerColor: '#333'
 # When F5 pressed or page has been reloaded <div> content is not missed
 $(document).ready ->
