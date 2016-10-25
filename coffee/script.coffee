@@ -1,9 +1,11 @@
-# Add "Back to top" button on bottom-right side of page
-$(document).ready ->
-  jQuery.goup location: 'right', containerSize: 60, trigger: 400, arrowColor: '#1fa67a', containerColor: '#333'
 # When F5 pressed or page has been reloaded <div> content is not missed
 $(document).ready ->
+   # Add "Back to top" button on bottom-right side of page
+   jQuery.goup location: 'right', containerSize: 60, trigger: 400, arrowColor: '#1fa67a', containerColor: '#333'
    href = location.hash.slice(1)
+   lastBeer = $('#beerList li:first a').attr('href').slice(1)
+   # Load last beer as start page
+   $('#changeableContent').load 'beers.html #' + lastBeer
    if href is 'kontakt'
      $('#changeableContent').load 'kontakt.html', ->
        submitBtnOff()

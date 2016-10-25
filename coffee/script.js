@@ -2,18 +2,17 @@
   var submitBtnOff;
 
   $(document).ready(function() {
-    return jQuery.goup({
+    var href, lastBeer;
+    jQuery.goup({
       location: 'right',
       containerSize: 60,
       trigger: 400,
       arrowColor: '#1fa67a',
       containerColor: '#333'
     });
-  });
-
-  $(document).ready(function() {
-    var href;
     href = location.hash.slice(1);
+    lastBeer = $('#beerList li:first a').attr('href').slice(1);
+    $('#changeableContent').load('beers.html #' + lastBeer);
     if (href === 'kontakt') {
       return $('#changeableContent').load('kontakt.html', function() {
         return submitBtnOff();
